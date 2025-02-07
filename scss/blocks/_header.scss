@@ -1,0 +1,33 @@
+.header {
+    min-height: 92px;
+    padding: 12px 0;
+    background-color: $pink-color;
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+    }
+    &__logo-img {
+        display: block;
+        width: 87px;
+        height: auto;
+        cursor: pointer;
+    }
+    &__title {
+        align-self: flex-end;
+        margin-right: auto;
+        cursor: pointer;
+    }
+    &__menu {
+        display: flex;
+        gap: 30px;
+    }
+    &__menu-link {
+        font-weight: bold;
+    }
+}

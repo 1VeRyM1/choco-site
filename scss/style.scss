@@ -2,15 +2,19 @@
 @import 'fonts.scss';
 
 html, body {
-    margin: 0;
-    padding: 0;
     font-size: 16px;
     font-family: "Comic Sans MS", "Comic Sans Web", cursive, sans-serif;
+    font-weight: normal;
+    color: $brown-color;
     line-height: 1.5;
+    background-color: $bg-color;
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: default;
 }
 
 ul, ol {
@@ -20,6 +24,7 @@ ul, ol {
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 button {
@@ -38,3 +43,5 @@ img {
     padding: 0 15px;
     margin: 0 auto;
 }
+
+@import 'blocks/header';
