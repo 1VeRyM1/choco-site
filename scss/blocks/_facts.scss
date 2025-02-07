@@ -1,0 +1,39 @@
+.facts {
+    padding: 60px 0 30px;
+    &__title {
+        margin-bottom: 30px;
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        gap: 30px;
+    }
+}
+
+.fact-block {
+    max-width: 807px;
+    display: flex;
+    padding: 16px;
+    gap: 16px;
+    flex: 1;
+    border-radius: 25px;
+    background-color: $block-color;
+    box-shadow: 4px 4px 30px $shadow-color;
+    &:nth-child(even) {
+        align-self: end;
+    }
+    &__img {
+        min-width: 259px;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+    &__title {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+}

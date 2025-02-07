@@ -1,0 +1,28 @@
+.footer {
+    min-height: 92px;
+    padding: 27px 0;
+    background-color: $brown-color;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__copyright {
+        font-weight: bold;
+        color: $pink-color;
+    }
+    &__rights {
+        font-weight: bold;
+        color: $pink-color;
+        text-transform: uppercase;
+    }
+    &__telegram {
+        width: 31px;
+        height: 32px;
+        display: block;
+        cursor: pointer;
+        img {
+            cursor: pointer;
+        }
+    }
+}
