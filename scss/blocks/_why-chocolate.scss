@@ -1,0 +1,12 @@
+.why-chocolate {
+    padding: 60px 0 48px;
+    &__title {
+        margin-bottom: 30px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        gap: clamp(15px, 5vw, 48px);
+    }
+}

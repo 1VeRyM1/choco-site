@@ -1,0 +1,47 @@
+.argument {
+    flex: 1;
+    border-radius: 25px;
+    background-color: $block-color;
+    padding: 16px;
+    box-shadow: 4px 4px 30px $shadow-color;
+    &__img {
+        float: left;
+        width: 150px;
+        height: auto;
+        object-fit: cover;
+        margin: 0 10px 0 0;
+        border-radius: 25px;
+    }
+    &__title {
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 12px;
+    }
+}
+
+.creeping-line {
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    min-height: 100px;
+    background-color: $block-color;
+    border-top: 1px solid $brown-color;
+    border-bottom: 1px solid $brown-color;
+    margin-bottom: 60px;
+    overflow: hidden;
+    &__text {
+        min-width: 200%;
+        font-size: 32px;
+        font-weight: bold;
+        // transition: all 1s;
+        // animation: line 10s linear infinite;
+    }
+}
+// @keyframes line {
+//     from {
+//         transform: translateX(0);
+//     }
+//     to {
+//         transform: translateX(-50%);
+//     }
+// }
