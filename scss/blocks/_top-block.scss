@@ -21,6 +21,7 @@
         font-weight: bold;
         border-right: 2px solid $brown-color;
         margin: 5px 0;
+        transition: color 0.3s;
         cursor: pointer;
         &:last-child {
             border-right: none;
@@ -95,4 +96,8 @@
 
 .grid-10 {
     grid-area: grid-10;
+}
+
+.active-tab {
+    color: $pink-color;
 }

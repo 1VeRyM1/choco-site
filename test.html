@@ -44,13 +44,108 @@
         </div>
     </header>
     <main>
+        <section class="test">
+            <div class="container test__container">
+                <h2 class="title test__title">Какой ты шоколад? Узнай свою сладкую сущность!</h2>
+                <article class="test-block">
+                    <form action="#" class="test-block__form">
+                        <h3 class="test-block__title">Как ты начинаешь утро?</h3>
+                        <div class="test-block__options">
+                            <input type="radio" name="test" id="answer-1" class="test-block__input" value="dark" checked>
+                            <label for="answer-1" class="test-block__item">С кофе</label>
+                            <input type="radio" name="test" id="answer-2" class="test-block__input" value="caramel">
+                            <label for="answer-2" class="test-block__item">С пробежки</label>
+                            <input type="radio" name="test" id="answer-3" class="test-block__input" value="milk">
+                            <label for="answer-3" class="test-block__item">Лежу в кровати</label>
+                            <input type="radio" name="test" id="answer-4" class="test-block__input" value="white">
+                            <label for="answer-4" class="test-block__item">Сладкий завтрак</label>
+                        </div>
+                        <button type="submit" class="test-block__button">СЛЕДУЮЩИЙ ВОПРОС</button>
+                        <div class="test-block__count">1/8</div>
+                    </form>
+                </article>
+            </div>
+        </section>
+        <section class="horoscope">
+            <div class="container horoscope__container">
+                <h2 class="title horoscope__title">Шоколадный гороскоп!</h2>
+                <article class="horoscope-block">
+                    <button class="horoscope-block__item">
+                        <svg class="horoscope-block__ico">
+                            <use xlink:href="img/sprite.svg#aquarius"></use>
+                        </svg>
+                    </button>
+                    <button class="horoscope-block__item">
+                        <svg class="horoscope-block__ico">
+                            <use xlink:href="img/sprite.svg#pisces"></use>
+                        </svg>
+                    </button>
+                    <button class="horoscope-block__item active-horoscope-item ">
+                        <svg class="horoscope-block__ico active-horoscope-ico">
+                            <use xlink:href="img/sprite.svg#aries"></use>
+                        </svg>
+                    </button>
+                    <button class="horoscope-block__item">
+                        <svg class="horoscope-block__ico">
+                            <use xlink:href="img/sprite.svg#taurus"></use>
+                        </svg>
+                    </button>
+                    <button class="horoscope-block__item">
+                        <svg class="horoscope-block__ico">
+                            <use xlink:href="img/sprite.svg#gemini"></use>
+                        </svg>
+                    </button>
+                    <picture class="horoscope-block__picture">
+                        <source srcset="img/horoscope/Aries1.webp" type="image/webp">
+                        <img src="img/horoscope/Aries1.jpg" alt="Шоколадный овен" class="horoscope-block__img">
+                    </picture>
+                    <button class="horoscope-block__item">
+                        <svg class="horoscope-block__ico">
+                            <use xlink:href="img/sprite.svg#cancer"></use>
+                        </svg>
+                    </button>
+                    <button class="horoscope-block__item">
+                        <svg class="horoscope-block__ico">
+                            <use xlink:href="img/sprite.svg#leo"></use>
+                        </svg>
+                    </button>
+                    <button class="horoscope-block__item">
+                        <svg class="horoscope-block__ico">
+                            <use xlink:href="img/sprite.svg#virgo"></use>
+                        </svg>
+                    </button>
+                    <button class="horoscope-block__item">
+                        <svg class="horoscope-block__ico">
+                            <use xlink:href="img/sprite.svg#libra"></use>
+                        </svg>
+                    </button>
+                    <button class="horoscope-block__item">
+                        <svg class="horoscope-block__ico">
+                            <use xlink:href="img/sprite.svg#scorpio"></use>
+                        </svg>
+                    </button>
+                    <button class="horoscope-block__item">
+                        <svg class="horoscope-block__ico">
+                            <use xlink:href="img/sprite.svg#sagittarius"></use>
+                        </svg>
+                    </button>
+                    <button class="horoscope-block__item">
+                        <svg class="horoscope-block__ico">
+                            <use xlink:href="img/sprite.svg#capricorn"></use>
+                        </svg>
+                    </button>
+                </article>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="container footer__container">
             <p class="footer__copyright">&copy; В.В.Поликанов. 2025г.</p>
             <p class="footer__rights">ВСЕ ШОКОЛАДНЫЕ ПРАВА НЕЗАЩИЩЕНЫ.</p>
             <a href="https://t.me/vladislavkalpa" target="_blank" class="footer__telegram">
-                <img src="img/telegram.svg" alt="telegram">
+                <svg class="footer__ico">
+                    <use xlink:href="img/sprite.svg#telegram"></use>
+                </svg>
             </a>
         </div>
     </footer>

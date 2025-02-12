@@ -10,3 +10,10 @@
 //     loadComponent("header.html", "header-container");
 //     loadComponent("footer.html", "footer-container");
 // });
+
+// const a = document.querySelector(".footer__telegram");
+
+// a.addEventListener("click", (e)=> {
+//     e.preventDefault();
+//     console.log("dwwe");
+// })

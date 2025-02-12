@@ -41,4 +41,12 @@
             text-orientation: mixed;
         }
 	}
+    &__mouse {
+        width: 14px;
+        height: 20px;
+    }
+    &__arrow-down {
+        width: 12px;
+        height: 14px;
+    }
 }

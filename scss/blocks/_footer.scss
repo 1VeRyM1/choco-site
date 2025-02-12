@@ -17,12 +17,17 @@
         text-transform: uppercase;
     }
     &__telegram {
-        width: 31px;
-        height: 32px;
         display: block;
+        width: 31px;
+        height: 31px;
         cursor: pointer;
-        img {
-            cursor: pointer;
+    }
+    &__ico {
+        width: 31px;
+        height: 31px;
+        cursor: pointer;
+        use {
+            pointer-events: none;
         }
     }
 }
