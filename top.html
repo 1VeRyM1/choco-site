@@ -14,41 +14,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <title>Шоколад</title> 
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/components.js" defer></script>
 </head>
 <body> 
-    <header class="header">
-        <div class="container header__container">
-            <a class="header__logo" href="/" aria-label="Перейти на главную страницу" title="Перейти на главную страницу">
-                <picture>
-                    <source srcset="img/logo.webp" type="image/webp">
-                    <img src="img/logo.png" class="header__logo-img" alt="Перейти на главную страницу">
-                </picture>
-                <h1 class="title header__title">Шоколад</h1>
-            </a>
-            <nav class="header__navigation" aria-label="Главное меню">
-                <ul class="header__menu">
-                    <li class="header__menu-item">
-                        <a href="\" class="header__menu-link">ГЛАВНАЯ</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="\top.html" class="header__menu-link">ТОП 10</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="\mem.html" class="header__menu-link">ШОКОМЕМЫ</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="\test.html" class="header__menu-link">ШОКОТЕСТЫ</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="header-import"></div>
+
     <main>
         <section class="top-block">
             <div class="container top-block__container">
                 <h2 class="title top-block__title">Лучший шоколад!</h2>
                 <div class="top-block__tabs">
-                    <label for="tabs-item-1" class="top-block__tabs-item active-tab">Премиальный ТОП
+                    <label for="tabs-item-1" class="top-block__tabs-item">Премиальный ТОП
                         <input type="radio" id="tabs-item-1" name="tab-btn" value="premium" class="top-block__tabs-input">
                     </label>
                     <label for="tabs-item-2" class="top-block__tabs-item">Бюджетный ТОП
@@ -62,120 +38,13 @@
                     </label>
                 </div>
                 <div class="top-block__wrapper">
-                    <article class="top-card grid-1">
-                        <picture>
-                            <source srcset="./img/top/top1.webp" type="image/webp">
-                            <img src="./img/top/top1.webp" alt="Шоколад" class="top-card__img">
-                        </picture>
-                        <div class="top-card__text">
-                            <h3 class="top-card__title">Amedei Porcelana</h3>
-                            <p class="top-card__descr">Один из самых редких и дорогих шоколадов в мире, из какао-бобов Porcelana.</p>
-                        </div>
-                    </article>
-                    <article class="top-card grid-2">
-                        <picture>
-                            <source srcset="./img/top/top2.webp" type="image/webp">
-                            <img src="./img/top/top2.webp" alt="Шоколад" class="top-card__img">
-                        </picture>
-                        <div class="top-card__text">
-                            <h3 class="top-card__title">Valrhona Manjari 64%</h3>
-                            <p class="top-card__descr">Французский шоколад с нотками красных ягод.</p>
-                        </div>
-                    </article>
-                    <article class="top-card grid-3">
-                        <picture>
-                            <source srcset="./img/top/top3.webp" type="image/webp">
-                            <img src="./img/top/top3.webp" alt="Шоколад" class="top-card__img">
-                        </picture>
-                        <div class="top-card__text">
-                            <h3 class="top-card__title">Amedei Toscano Black 70%</h3>
-                            <p class="top-card__descr">Тёмный шоколад с бархатной текстурой.</p>
-                        </div>
-                    </article>
-                    <article class="top-card grid-4">
-                        <picture>
-                            <source srcset="./img/top/top4.webp" type="image/webp">
-                            <img src="./img/top/top4.webp" alt="Шоколад" class="top-card__img">
-                        </picture>
-                        <div class="top-card__text">
-                            <h3 class="top-card__title">Michel Cluizel Noir de Plantation 72%</h3>
-                            <p class="top-card__descr">Тёмный шоколад с изысканным ароматом.</p>
-                        </div>
-                    </article>
-                    <article class="top-card grid-5">
-                        <picture>
-                            <source srcset="./img/top/top5.webp" type="image/webp">
-                            <img src="./img/top/top5.webp" alt="Шоколад" class="top-card__img">
-                        </picture>
-                        <div class="top-card__text">
-                            <h3 class="top-card__title">Domori Criollo 80%</h3>
-                            <p class="top-card__descr">Итальянский шоколад из редких бобов Criollo, мягкий и насыщенный.</p>
-                        </div>
-                    </article>
-                    <article class="top-card grid-6">
-                        <picture>
-                            <source srcset="./img/top/top6.webp" type="image/webp">
-                            <img src="./img/top/top6.webp" alt="Шоколад" class="top-card__img">
-                        </picture>
-                        <div class="top-card__text">
-                            <h3 class="top-card__title">Mast Brothers Dark Chocolate</h3>
-                            <p class="top-card__descr">Нью-йоркский шоколад ручной работы.</p>
-                        </div>
-                    </article>
-                    <article class="top-card grid-7">
-                        <picture>
-                            <source srcset="./img/top/top7.webp" type="image/webp">
-                            <img src="./img/top/top7.webp" alt="Шоколад" class="top-card__img">
-                        </picture>
-                        <div class="top-card__text">
-                            <h3 class="top-card__title">To’ak Chocolate 75%</h3>
-                            <p class="top-card__descr">Эквадорский элитный шоколад, выдержанный в дубовых бочках.</p>
-                        </div>
-                    </article>
-                    <article class="top-card grid-8">
-                        <picture>
-                            <source srcset="./img/top/top8.webp" type="image/webp">
-                            <img src="./img/top/top8.webp" alt="Шоколад" class="top-card__img">
-                        </picture>
-                        <div class="top-card__text">
-                            <h3 class="top-card__title">Pierre Marcolini Grand Cru</h3>
-                            <p class="top-card__descr">Бельгийский шоколад с многослойным вкусом.</p>
-                        </div>
-                    </article>
-                    <article class="top-card grid-9">
-                        <picture>
-                            <source srcset="./img/top/top9.webp" type="image/webp">
-                            <img src="./img/top/top9.webp" alt="Шоколад" class="top-card__img">
-                        </picture>
-                        <div class="top-card__text">
-                            <h3 class="top-card__title">Chocolat Bonnat 75%</h3>
-                            <p class="top-card__descr">Французский шоколад с кремовой текстурой.</p>
-                        </div>
-                    </article>
-                    <article class="top-card grid-10">
-                        <picture>
-                            <source srcset="./img/top/top10.webp" type="image/webp">
-                            <img src="./img/top/top10.webp" alt="Шоколад" class="top-card__img">
-                        </picture>
-                        <div class="top-card__text">
-                            <h3 class="top-card__title">Pralus Le 100% Criollo</h3>
-                            <p class="top-card__descr">100% какао-бобы без сахара.</p>
-                        </div>
-                    </article>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="container footer__container">
-            <p class="footer__copyright">&copy; В.В.Поликанов. 2025г.</p>
-            <p class="footer__rights">ВСЕ ШОКОЛАДНЫЕ ПРАВА НЕЗАЩИЩЕНЫ.</p>
-            <a href="https://t.me/vladislavkalpa" target="_blank" class="footer__telegram">
-                <svg class="footer__ico">
-                    <use xlink:href="img/sprite.svg#telegram"></use>
-                </svg>
-            </a>
-        </div>
-    </footer>
+
+    <div class="footer-import"></div>
+    
+    <script src="js/top.js"></script>
 </body>
 </html>

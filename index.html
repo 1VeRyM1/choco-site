@@ -14,35 +14,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <title>Шоколад</title> 
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/components.js" defer></script>
 </head>
 <body> 
-    <header class="header">
-        <div class="container header__container">
-            <a class="header__logo" href="/" aria-label="Перейти на главную страницу" title="Перейти на главную страницу">
-                <picture>
-                    <source srcset="img/logo.webp" type="image/webp">
-                    <img src="img/logo.png" class="header__logo-img" alt="Перейти на главную страницу">
-                </picture>
-                <h1 class="title header__title">Шоколад</h1>
-            </a>
-            <nav class="header__navigation" aria-label="Главное меню">
-                <ul class="header__menu">
-                    <li class="header__menu-item">
-                        <a href="\" class="header__menu-link">ГЛАВНАЯ</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="\top.html" class="header__menu-link">ТОП 10</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="\mem.html" class="header__menu-link">ШОКОМЕМЫ</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="\test.html" class="header__menu-link">ШОКОТЕСТЫ</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="header-import"></div>
+
     <main>
         <section class="why-chocolate">
             <div class="container why-chocolate__container">
@@ -78,7 +54,7 @@
             </div>
         </section>
         <section class="creeping-line">
-            <p class="creeping-line__text">Жизнь слаще с шоколадом &#10084; Жизнь слаще с шоколадом &#10084; Жизнь слаще с шоколадом &#10084; Жизнь слаще с шоколадом &#10084; Жизнь слаще с шоколадом &#10084; Жизнь слаще с шоколадом &#10084; Жизнь слаще с шоколадом &#10084;             <p class="creeping-line__text">Жизнь слаще с шоколадом &#10084; Жизнь слаще с шоколадом &#10084; Жизнь слаще с шоколадом &#10084; Жизнь слаще с шоколадом &#10084; Жизнь слаще с шоколадом &#10084; Жизнь слаще с шоколадом &#10084; Жизнь слаще с шоколадом &#10084;</p>
+            <p class="creeping-line__text">Жизнь слаще с шоколадом &#10084;</p>
         </section>
         <section class="facts">
             <div class="container facts__container">
@@ -145,17 +121,11 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="container footer__container">
-            <p class="footer__copyright">&copy; В.В.Поликанов. 2025г.</p>
-            <p class="footer__rights">ВСЕ ШОКОЛАДНЫЕ ПРАВА НЕЗАЩИЩЕНЫ.</p>
-            <a href="https://t.me/vladislavkalpa" target="_blank" class="footer__telegram">
-                <svg class="footer__ico">
-                    <use xlink:href="img/sprite.svg#telegram"></use>
-                </svg>
-            </a>
-        </div>
-    </footer>
-    <script src="js/script.js"></script>
+
+    <div class="footer-import"></div>
+    
+    <script src="js/creeping.js"></script>
+    <script src="js/facts.js"></script>
+    <script src="js/history.js"></script>
 </body>
 </html>

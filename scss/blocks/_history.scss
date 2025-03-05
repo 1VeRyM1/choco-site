@@ -13,6 +13,9 @@
     box-shadow: 4px 4px 30px $shadow-color;
     width: 100%;
     margin: 0 auto;
+    &__wrapper {
+        transition: opacity 0.3s;
+    }
     &__title {
         font-size: 24px;
         font-weight: bold;
@@ -24,6 +27,11 @@
     }
     &__text {
         margin-bottom: 10px;
+    }
+    &__list {
+        list-style-type:circle;
+        margin-bottom: 10px;
+        padding-left: 20px;
     }
 	&__scroll-wrapp {
         position: absolute;
@@ -49,4 +57,7 @@
         width: 12px;
         height: 14px;
     }
+}
+.change {
+    opacity: 0;
 }

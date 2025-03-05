@@ -21,6 +21,7 @@
     border-radius: 25px;
     background-color: $block-color;
     box-shadow: 4px 4px 30px $shadow-color;
+    transition: all 0.2s;
     &:nth-child(even) {
         align-self: end;
     }

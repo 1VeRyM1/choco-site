@@ -14,35 +14,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <title>Шоколад</title> 
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/components.js" defer></script>
 </head>
 <body> 
-    <header class="header">
-        <div class="container header__container">
-            <a class="header__logo" href="/" aria-label="Перейти на главную страницу" title="Перейти на главную страницу">
-                <picture>
-                    <source srcset="img/logo.webp" type="image/webp">
-                    <img src="img/logo.png" class="header__logo-img" alt="Перейти на главную страницу">
-                </picture>
-                <h1 class="title header__title">Шоколад</h1>
-            </a>
-            <nav class="header__navigation" aria-label="Главное меню">
-                <ul class="header__menu">
-                    <li class="header__menu-item">
-                        <a href="\" class="header__menu-link">ГЛАВНАЯ</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="\top.html" class="header__menu-link">ТОП 10</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="\mem.html" class="header__menu-link">ШОКОМЕМЫ</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="\test.html" class="header__menu-link">ШОКОТЕСТЫ</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="header-import"></div>
+
     <main>
         <section class="mem-block">
             <div class="container mem-block__container">
@@ -124,16 +100,19 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="container footer__container">
-            <p class="footer__copyright">&copy; В.В.Поликанов. 2025г.</p>
-            <p class="footer__rights">ВСЕ ШОКОЛАДНЫЕ ПРАВА НЕЗАЩИЩЕНЫ.</p>
-            <a href="https://t.me/vladislavkalpa" target="_blank" class="footer__telegram">
-                <svg class="footer__ico">
-                    <use xlink:href="img/sprite.svg#telegram"></use>
-                </svg>
-            </a>
+
+    <div class="footer-import"></div>
+
+    <div class="mem-big">
+        <button class="mem-big__close"></button>
+        <div class="mem-big__wrapper">
+            <picture>
+                <source srcset="img/meme/mem1.webp" type="image/webp">
+                <img src="img/meme/mem1.jpg" alt="Мем" class="mem-big__img">
+            </picture>
         </div>
-    </footer>
+    </div>
+    
+    <script src="js/gallery.js"></script>
 </body>
 </html>

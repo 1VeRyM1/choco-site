@@ -14,35 +14,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <title>Шоколад</title> 
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/components.js" defer></script>
 </head>
 <body> 
-    <header class="header">
-        <div class="container header__container">
-            <a class="header__logo" href="/" aria-label="Перейти на главную страницу" title="Перейти на главную страницу">
-                <picture>
-                    <source srcset="img/logo.webp" type="image/webp">
-                    <img src="img/logo.png" class="header__logo-img" alt="Перейти на главную страницу">
-                </picture>
-                <h1 class="title header__title">Шоколад</h1>
-            </a>
-            <nav class="header__navigation" aria-label="Главное меню">
-                <ul class="header__menu">
-                    <li class="header__menu-item">
-                        <a href="\" class="header__menu-link">ГЛАВНАЯ</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="\top.html" class="header__menu-link">ТОП 10</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="\mem.html" class="header__menu-link">ШОКОМЕМЫ</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="\test.html" class="header__menu-link">ШОКОТЕСТЫ</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="header-import"></div>
+
     <main>
         <section class="test">
             <div class="container test__container">
@@ -51,14 +27,6 @@
                     <form action="#" class="test-block__form">
                         <h3 class="test-block__title">Как ты начинаешь утро?</h3>
                         <div class="test-block__options">
-                            <input type="radio" name="test" id="answer-1" class="test-block__input" value="dark" checked>
-                            <label for="answer-1" class="test-block__item">С кофе</label>
-                            <input type="radio" name="test" id="answer-2" class="test-block__input" value="caramel">
-                            <label for="answer-2" class="test-block__item">С пробежки</label>
-                            <input type="radio" name="test" id="answer-3" class="test-block__input" value="milk">
-                            <label for="answer-3" class="test-block__item">Лежу в кровати</label>
-                            <input type="radio" name="test" id="answer-4" class="test-block__input" value="white">
-                            <label for="answer-4" class="test-block__item">Сладкий завтрак</label>
                         </div>
                         <button type="submit" class="test-block__button">СЛЕДУЮЩИЙ ВОПРОС</button>
                         <div class="test-block__count">1/8</div>
@@ -70,27 +38,27 @@
             <div class="container horoscope__container">
                 <h2 class="title horoscope__title">Шоколадный гороскоп!</h2>
                 <article class="horoscope-block">
-                    <button class="horoscope-block__item">
+                    <button data-horo="11" class="horoscope-block__item">
                         <svg class="horoscope-block__ico">
                             <use xlink:href="img/sprite.svg#aquarius"></use>
                         </svg>
                     </button>
-                    <button class="horoscope-block__item">
+                    <button data-horo="12" class="horoscope-block__item">
                         <svg class="horoscope-block__ico">
                             <use xlink:href="img/sprite.svg#pisces"></use>
                         </svg>
                     </button>
-                    <button class="horoscope-block__item active-horoscope-item ">
-                        <svg class="horoscope-block__ico active-horoscope-ico">
+                    <button data-horo="1" class="horoscope-block__item">
+                        <svg class="horoscope-block__ico">
                             <use xlink:href="img/sprite.svg#aries"></use>
                         </svg>
                     </button>
-                    <button class="horoscope-block__item">
+                    <button data-horo="2" class="horoscope-block__item">
                         <svg class="horoscope-block__ico">
                             <use xlink:href="img/sprite.svg#taurus"></use>
                         </svg>
                     </button>
-                    <button class="horoscope-block__item">
+                    <button data-horo="3" class="horoscope-block__item">
                         <svg class="horoscope-block__ico">
                             <use xlink:href="img/sprite.svg#gemini"></use>
                         </svg>
@@ -99,37 +67,37 @@
                         <source srcset="img/horoscope/Aries1.webp" type="image/webp">
                         <img src="img/horoscope/Aries1.jpg" alt="Шоколадный овен" class="horoscope-block__img">
                     </picture>
-                    <button class="horoscope-block__item">
+                    <button data-horo="4" class="horoscope-block__item">
                         <svg class="horoscope-block__ico">
                             <use xlink:href="img/sprite.svg#cancer"></use>
                         </svg>
                     </button>
-                    <button class="horoscope-block__item">
+                    <button data-horo="5" class="horoscope-block__item">
                         <svg class="horoscope-block__ico">
                             <use xlink:href="img/sprite.svg#leo"></use>
                         </svg>
                     </button>
-                    <button class="horoscope-block__item">
+                    <button data-horo="6" class="horoscope-block__item">
                         <svg class="horoscope-block__ico">
                             <use xlink:href="img/sprite.svg#virgo"></use>
                         </svg>
                     </button>
-                    <button class="horoscope-block__item">
+                    <button data-horo="7" class="horoscope-block__item">
                         <svg class="horoscope-block__ico">
                             <use xlink:href="img/sprite.svg#libra"></use>
                         </svg>
                     </button>
-                    <button class="horoscope-block__item">
+                    <button data-horo="8" class="horoscope-block__item">
                         <svg class="horoscope-block__ico">
                             <use xlink:href="img/sprite.svg#scorpio"></use>
                         </svg>
                     </button>
-                    <button class="horoscope-block__item">
+                    <button data-horo="9" class="horoscope-block__item">
                         <svg class="horoscope-block__ico">
                             <use xlink:href="img/sprite.svg#sagittarius"></use>
                         </svg>
                     </button>
-                    <button class="horoscope-block__item">
+                    <button data-horo="10" class="horoscope-block__item">
                         <svg class="horoscope-block__ico">
                             <use xlink:href="img/sprite.svg#capricorn"></use>
                         </svg>
@@ -138,16 +106,10 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="container footer__container">
-            <p class="footer__copyright">&copy; В.В.Поликанов. 2025г.</p>
-            <p class="footer__rights">ВСЕ ШОКОЛАДНЫЕ ПРАВА НЕЗАЩИЩЕНЫ.</p>
-            <a href="https://t.me/vladislavkalpa" target="_blank" class="footer__telegram">
-                <svg class="footer__ico">
-                    <use xlink:href="img/sprite.svg#telegram"></use>
-                </svg>
-            </a>
-        </div>
-    </footer>
+    
+    <div class="footer-import"></div>
+
+    <script src="js/test.js"></script>
+    <script src="js/horoscope.js"></script>
 </body>
 </html>

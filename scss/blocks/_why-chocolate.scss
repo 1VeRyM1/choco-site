@@ -39,20 +39,8 @@
     background-color: $block-color;
     border-top: 1px solid $brown-color;
     border-bottom: 1px solid $brown-color;
-    overflow: hidden;
     &__text {
-        min-width: 200%;
         font-size: 32px;
         font-weight: bold;
-        // transition: all 1s;
-        // animation: line 10s linear infinite;
     }
 }
-// @keyframes line {
-//     from {
-//         transform: translateX(0);
-//     }
-//     to {
-//         transform: translateX(-50%);
-//     }
-// }
