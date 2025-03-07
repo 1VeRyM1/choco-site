@@ -134,3 +134,45 @@
 .active-horoscope-ico {
     fill: $pink-color;
 }
+
+@media (max-width: 991px) {
+    .test {
+        padding: 48px 0 24px;
+    }
+    .horoscope {
+        padding: 28px 0 48px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .test {
+        padding: 24px 0 12px;
+        &__title {
+            margin-bottom: 20px;
+        }
+    }
+    .horoscope {
+        padding: 12px 0 24px;
+        &__title {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: 544px) {
+    .test {
+        padding: 20px 0 10px;
+    }
+    .test-block {
+        &__title {
+            font-size: 20px;
+        }
+    }
+    .horoscope {
+        padding: 10px 0 20px;
+        &__container {
+            padding: 0 10px;
+        }
+    }
+}

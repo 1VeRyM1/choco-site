@@ -35,7 +35,7 @@
         width: 40px;
         height: 40px;
         position: absolute;
-        top: 27px;
+        top: 28px;
         right: 15px;
         background-color: $brown-color;
         padding: 5px;
@@ -72,5 +72,43 @@
         width: 100%;  
         height: auto;
         object-fit: cover; 
+    }
+}
+
+
+@media (max-width: 991px) {
+    .mem-block {
+        padding: 48px 0 48px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+    .mem-block {
+        padding: 24px 0 24px;
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+    }
+    .mem-big {
+        &__close {
+            top: 12px;
+            right: 15px;
+        }
+    }
+}
+
+@media (max-width: 544px) {
+    .mem-block {
+        padding: 20px 0 20px;
+        &__wrapper {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 15px;
+        }
     }
 }

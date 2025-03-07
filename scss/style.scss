@@ -9,6 +9,7 @@ html, body {
     color: $brown-color;
     line-height: 1.5;
     background-color: $bg-color;
+    user-select: none;
 }
 
 *, *::before, *::after {

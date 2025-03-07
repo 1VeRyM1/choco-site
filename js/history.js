@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", ()=> {
     const historyArray = [
-        `<h3 class="history-block__title">1. Шоколад у майя и ацтеков (1500 до н. э. – 1500 н. э.)</h3>
+        `<h3 class="history-block__title">1. Шоколад у майя и ацтеков (1500 до н.э. – 1500 н.э.)</h3>
         <p class="history-block__subtitle"><strong>Происхождение:</strong></p>
         <p class="history-block__text">Первое употребление какао связано с древними цивилизациями ольмеков, которые жили в Центральной Америке около 1500 г. до н. э. Позже майя и ацтеки усовершенствовали искусство приготовления шоколада.</p>
         <p class="history-block__subtitle"><strong>Шоколад в культуре майя:</strong></p>    
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
         `<h3 class="history-block__title">3. Промышленная революция и рождение плиточного шоколада (1800–1900)</h3>
         <p class="history-block__text">До 19 века шоколад пили в виде напитка. Однако в 1828 году голландский химик Конрад ван Хоутен изобрел пресс для какао, который позволял отделять масло от какао-порошка. Это сделало шоколад более доступным.</p>
         <p class="history-block__subtitle"><strong>Появление твёрдого шоколада:</strong></p>
-        <p class="history-block__text"В 1847 году британская компания J.S. Fry & Sons создала первую шоколадную плитку, смешав какао-масло с сахаром и какао-порошком.</p>
+        <p class="history-block__text">В 1847 году британская компания J.S. Fry & Sons создала первую шоколадную плитку, смешав какао-масло с сахаром и какао-порошком.</p>
         <p class="history-block__subtitle"><strong>Появление молочного шоколада:</strong></p>    
         <p class="history-block__text">В 1875 году швейцарец Даниэль Петер добавил сгущенное молоко, изобретенное его другом Анри Нестле, и сделал молочный шоколад, который стал хитом.</p>
         <p class="history-block__subtitle"><strong>Роль Рудольфа Линдта:</strong></p>
@@ -27,22 +27,35 @@ document.addEventListener("DOMContentLoaded", ()=> {
         
         `<h3 class="history-block__title">4. 20 век – расцвет шоколадных брендов</h3>
         <p class="history-block__subtitle"><strong>В 20 веке шоколад стал массовым продуктом. Появились такие бренды, как:</strong></p>
-        <li class="history-block__list-item">Hershey’s (1894, США) – сделал шоколад доступным для всех.</li>
-        <li class="history-block__list-item">Cadbury (1824, Великобритания) – разработал молочный шоколад Dairy Milk.</li>
-        <li class="history-block__list-item">Nestlé (1866, Швейцария) – создал KitKat, Milkybar и другие.</li>
-        <li class="history-block__list-item">Mars (1911, США) – выпустил Snickers, Twix и Bounty.</li>
+        <ul class="history-block__list">
+            <li class="history-block__list-item">Hershey’s (1894, США) – сделал шоколад доступным для всех.</li>
+            <li class="history-block__list-item">Cadbury (1824, Великобритания) – разработал молочный шоколад Dairy Milk.</li>
+            <li class="history-block__list-item">Nestlé (1866, Швейцария) – создал KitKat, Milkybar и другие.</li>
+            <li class="history-block__list-item">Mars (1911, США) – выпустил Snickers, Twix и Bounty.</li>
+        </ul>
         <p class="history-block__text">Во время Второй мировой войны шоколадные батончики входили в рацион солдат, а компании разрабатывали рецептуры, устойчивые к жаре.</p>`,
     
         `<h3 class="history-block__title">5. Современный шоколад (2000-е – сегодня)</h3>
         <p class="history-block__subtitle"><strong>Сегодня шоколад – это огромная индустрия, включающая:</strong></p>
-        <li class="history-block__list-item">Премиальный шоколад (Lindt, Godiva, Valrhona).</li>
-        <li class="history-block__list-item">Шоколадные батончики (Snickers, Twix, Bounty).</li>
-        <li class="history-block__list-item">Органический и этичный шоколад (Bean-to-bar, Fair Trade).</li>
+        <ul class="history-block__list">
+            <li class="history-block__list-item">Премиальный шоколад (Lindt, Godiva, Valrhona).</li>
+            <li class="history-block__list-item">Шоколадные батончики (Snickers, Twix, Bounty).</li>
+            <li class="history-block__list-item">Органический и этичный шоколад (Bean-to-bar, Fair Trade).</li>
+        </ul>
         <p class="history-block__text">Сейчас шоколад доступен во всевозможных формах и вкусах – от классического до с морской солью, перцем и даже золотом.</p>
         <p class="history-block__subtitle"><strong>Заключение:</strong></p>
         <p class="history-block__text">От священного напитка майя до современной шоколадной индустрии – шоколад прошел огромный путь. Он остается символом радости, удовольствия и праздника, а его история продолжается!</p>`
     ];
     
+    let indexHistoryArray = 0;
+    let throttle = false;
+    let startTouchX = 0;
+
+    const historyBlock = document.querySelector(".history-block"),
+          historyWrapper = document.querySelector(".history-block__wrapper"),
+          historyPrevButton = document.querySelector("#prev"),
+          historyNextButton = document.querySelector("#next");
+
     function scrollHistoryBlock(arr, wrapper, step) {
         if ((indexHistoryArray + step >= 0) && (indexHistoryArray + step < arr.length)) {
             indexHistoryArray += step;
@@ -52,14 +65,11 @@ document.addEventListener("DOMContentLoaded", ()=> {
                 wrapper.classList.remove("change");
             }, 300);
         }
+        historyPrevButton.classList.toggle("disabled-btn", indexHistoryArray === 0);
+        historyNextButton.classList.toggle("disabled-btn", indexHistoryArray === arr.length - 1);
     }
     
-    const historyBlock = document.querySelector(".history-block"),
-          historyWrapper = document.querySelector(".history-block__wrapper");
-    
-    let indexHistoryArray = 0;
-    let throttle = false;
-    
+    // Обработчики для десктопных устройств
     historyBlock.addEventListener("wheel", (e)=> {
         e.preventDefault();
         if (!throttle) {
@@ -68,4 +78,30 @@ document.addEventListener("DOMContentLoaded", ()=> {
             setTimeout(() => throttle = false, 300);
         }
     });
+
+    // Обработчики для мобильных устройств
+    historyBlock.addEventListener("touchstart", (e) => {
+        startTouchX = e.touches[0].clientX;
+    });
+
+    historyBlock.addEventListener("touchmove", (e) => {
+        const currentTouchX = e.touches[0].clientX;
+        const difference = startTouchX - currentTouchX;
+
+        if (Math.abs(difference) > 30 && !throttle) {
+            throttle = true;
+            scrollHistoryBlock(historyArray, historyWrapper, difference > 0 ? +1 : -1);
+            setTimeout(() => throttle = false, 300);
+            startTouchX = currentTouchX;
+        }
+    });
+
+    // Обработчики для кнопок устройств
+    historyPrevButton.addEventListener("click", ()=> {
+        scrollHistoryBlock(historyArray, historyWrapper, -1);
+    })
+
+    historyNextButton.addEventListener("click", ()=> {
+        scrollHistoryBlock(historyArray, historyWrapper, +1);
+    })
 });

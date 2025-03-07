@@ -6,8 +6,7 @@
     &__tabs {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-
-        height: 50px;
+        min-height: 50px;
         border-radius: 25px;
         background-color: $block-color;
         box-shadow: 4px 4px 30px $shadow-color;
@@ -52,7 +51,7 @@
         margin-bottom: 12px;
     }
     &__title {
-        font-style: 20px;
+        font-size: 20px;
         font-weight: bold;
         margin-bottom: 8px;
     }
@@ -100,4 +99,91 @@
 
 .active-tab {
     color: $pink-color;
+}
+
+
+@media (max-width: 991px) {
+    .top-block {
+        padding: 48px 0 48px;
+        &__tabs-item {
+            font-size: 16px;
+        }
+        &__wrapper {
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 20px;
+            column-gap: 20px;
+            grid-template-areas: 
+            "grid-1 grid-2 grid-3"
+            "grid-4 grid-5 grid-6"
+            "grid-7 grid-8 grid-9"
+            ". grid-10 .";
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .top-block {
+        padding: 24px 0 24px;
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__tabs {
+            grid-template-columns: repeat(2, 1fr);
+            margin: 0 auto 20px;
+            padding: 5px;
+        }
+        &__tabs-item {
+            border-right: 2px solid $brown-color;
+            border-top: 2px solid $brown-color;
+            margin: 0;
+            &:nth-child(even) {
+                border-right: none;
+            }
+            &:nth-child(-n+2) {
+                border-top: none;
+            }
+        }
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: 
+            "grid-1 grid-2"
+            "grid-3 grid-4"
+            "grid-5 grid-6"
+            "grid-7 grid-8"
+            "grid-9 grid-10";
+        }
+    }
+}
+
+@media (max-width: 544px) {
+    .top-block {
+        padding: 20px 0 20px;
+        &__tabs {
+            grid-template-columns: 1fr;
+            margin: 0 auto 20px;
+            padding: 5px;
+        }
+        &__tabs-item {
+            border-right: none;
+            border-top: none;
+            &:nth-child(n+2) {
+                border-top: 2px solid $brown-color;
+            }
+        }
+        &__wrapper {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "grid-1"
+            "grid-2"
+            "grid-3"
+            "grid-4"
+            "grid-5"
+            "grid-6"
+            "grid-7"
+            "grid-8"
+            "grid-9"
+            "grid-10";
+        }
+    }
 }

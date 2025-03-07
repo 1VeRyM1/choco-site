@@ -27,6 +27,7 @@
     &__title {
         text-transform: uppercase;
         font-weight: bold;
+        font-size: 18px;
         margin-bottom: 12px;
     }
 }
@@ -35,12 +36,84 @@
     display: flex;
     white-space: nowrap;
     align-items: center;
-    min-height: 100px;
+    height: 100px;
     background-color: $block-color;
     border-top: 1px solid $brown-color;
     border-bottom: 1px solid $brown-color;
+    overflow: hidden;
     &__text {
         font-size: 32px;
         font-weight: bold;
+    }
+}
+
+@media (max-width: 1170px) {
+    .argument {
+        &__img {
+            float: none;
+            margin: 0 0 10px 0;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .why-chocolate {
+        padding: 48px 0;
+        &__wrapper {
+            gap: 24px;
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .why-chocolate {
+        padding: 24px 0;
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+    .argument {
+        &__img {
+            float: left;
+            margin: 0 10px 0 0;
+        }
+    }
+    .creeping-line {
+        height: 80px;
+        &__text {
+            font-size: 26px;
+            font-weight: bold;
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    .argument {
+        &__img {
+            float: none;
+            margin: 0 0 10px 0;
+        }
+    }
+}
+
+@media (max-width: 544px) {
+    .why-chocolate {
+        padding: 20px 0;
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__wrapper {
+            gap: 16px;
+        }
+    }
+    .argument {
+        &__img {
+            float: none;
+            margin: 0 0 10px 0;
+        }
     }
 }

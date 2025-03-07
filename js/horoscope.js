@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
     buidActiveCard(document.querySelector(`[data-horo="${horoscopeStorage.getItem("horoscope")}"]`), horoscopeStorage.getItem("horoscope")-1)
 
-    horoscopeWrapper.addEventListener("mouseover", (e)=> {
+    function horoscopeEvent(e) {
         let target = e.target;
 
         if (target && target.closest(".horoscope-block__item")) {
@@ -45,5 +45,8 @@ document.addEventListener("DOMContentLoaded", ()=> {
             horoscopeStorage.setItem("horoscope", attributeHoroscope)
             buidActiveCard(item, attributeHoroscope-1);
         }
-    })
+    }
+ 
+    horoscopeWrapper.addEventListener("mouseover", horoscopeEvent);
+    horoscopeWrapper.addEventListener("touch", touchstart, { passive: true });
 });

@@ -38,3 +38,54 @@
         text-align: left;
     }
 }
+
+@media (max-width: 991px) {
+    .facts {
+        padding: 48px 0 24px;
+        &__wrapper {
+            gap: 24px;
+        }
+    }
+    .fact-block {
+        &__title {
+            font-size: 26px;
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .facts {
+        padding: 24px 0 12px;
+        &__title {
+            margin-bottom: 20px;
+        }
+    }
+    .fact-block {
+        &__title {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .fact-block {
+        flex-direction: column;
+        gap: 12px;
+        &__img {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 544px) {
+    .facts {
+        padding: 20px 0 10px;
+    }
+    .fact-block {
+        &__title {
+            font-size: 18px;
+        }
+    }
+}

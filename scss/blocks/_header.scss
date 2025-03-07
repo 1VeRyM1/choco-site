@@ -42,7 +42,7 @@
         height: 40px;
         position: absolute;
         z-index: 2;
-        top: 27px;
+        top: 28px;
         right: 15px;
         background-color: $brown-color;
         padding: 5px;
@@ -84,7 +84,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .header {
         &__navigation {
             position: absolute;
@@ -122,6 +122,36 @@
             & span {
                 width: 0px;
             }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        min-height: 64px;
+        padding: 12px 0;
+        background-color: $pink-color;
+        &__container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__logo {
+            display: flex;
+            align-items: center;
+        }
+        &__logo-img {
+            width: auto;
+            height: 40px;
+        }
+        &__title {
+            align-self: flex-end;
+            margin-right: auto;
+            cursor: pointer;
+        }
+        &__button {
+            top: 12px;
         }
     }
 }
